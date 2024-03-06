@@ -15,5 +15,5 @@ jobs:
         node-version: 8
     - name: Install surge
       run: sudo npm install -g surge
-    - name: Deploy to jairodominguez3594@gmail.com
+    - name: Deploy to JairoDH@gmail.com
       run: surge ./_build/ JairoDH.surge.sh --token ${{ secrets.SURGE_TOKEN }}   
