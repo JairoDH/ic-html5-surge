@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git branch: 'master', url: 'https://github.com/JairoDH/ic-html5-surge.git'
+                git branch:'master',url: 'https://github.com/JairoDH/ic-html5-surge.git'
             }
         }
         stage('Install surge') {
@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "surge ./_build/ jairodh.surge.sh --token ${TOKEN}"
+                sh 'surge ./_build/ jairodh.surge.sh --token $TOKEN'
             }
         }
     }
